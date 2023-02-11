@@ -2,11 +2,14 @@ name: Release Charts
 
 on:
   push:
-    branches:
-      - main
+    paths:
+      - charts/traccar/Chart.yaml
+  workflow_dispatch:
 
 jobs:
   release:
+    if: github.ref_name == 'main'
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
