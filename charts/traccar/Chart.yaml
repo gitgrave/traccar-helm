@@ -6,7 +6,7 @@ version: 1.7.1
 appVersion: "5.10"
 dependencies:
   - name: mysql
-    version: 9.4.8
+    version: 9.4.9
     repository: https://charts.bitnami.com/bitnami
     condition: mysql.enabled
   - name: redis-ha
