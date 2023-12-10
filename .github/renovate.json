@@ -1,0 +1,27 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+  "labels": [
+    "renovate 🔨"
+  ],
+  "separateMinorPatch": true,
+  "separateMultipleMajor": true,
+  "automergeType": "branch",
+  "pruneStaleBranches": true,
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": [
+        "charts/traccar/Chart.yaml"
+      ],
+      "matchStrings": [
+        "appVersion: \"(?<currentValue>.*?)\"\\n"
+      ],
+      "datasourceTemplate": "github-tags",
+      "depNameTemplate": "traccar/traccar-docker",
+      "extractVersionTemplate": "^v?(?<version>.+)"
+    }
+  ]
+}
