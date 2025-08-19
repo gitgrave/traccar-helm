@@ -911,6 +911,13 @@ tolerations: []
 
 affinity: {}
 
+extraVolumes: []
+# - name: "override"
+#   emptyDir: {}
+extraVolumeMounts: []
+# - name: "override"
+#   mountPath: "/opt/traccar/override"
+
 redis-ha:
   # enables the redis subchart
   enabled: false
