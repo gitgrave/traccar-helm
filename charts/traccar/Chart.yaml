@@ -10,7 +10,7 @@ dependencies:
     repository: https://charts.bitnami.com/bitnami
     condition: mysql.enabled
   - name: redis-ha
-    version: 4.23.0
+    version: 4.33.8
     repository: https://dandydeveloper.github.io/charts
     condition: redis-ha.enabled
 maintainers:
